@@ -34,7 +34,9 @@ public class A1Novice {
 				 total += count * price;
 			 }
 			 
-			 System.out.println(firstName.charAt(0) + ". " + lastName + ": " + total);
+			 String printTotal = String.format("%.2f", total);
+			  
+			 System.out.println(firstName.charAt(0) + ". " + lastName + ": " + printTotal);
 			 total = 0.00;
 			 
 		 }
