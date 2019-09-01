@@ -18,6 +18,7 @@ public class A1Jedi {
 		int numberItems = scan.nextInt();
 		String[] itemNames = new String[numberItems];
 		int[] totals = new int[numberItems];
+		int[] customerTotals = new int[numberItems];
 		
 		//unnecessary
 		double[] itemPrices = new double[numberItems];
@@ -45,20 +46,34 @@ public class A1Jedi {
 			for (int k=0; k<itemsBought; k++) {
 				int numberOfItem = scan.nextInt();
 				String productBought = scan.next();
+				boolean booleanProduct = false;
+				int indexOfItem = 0;
 				
 				//this is the loop that goes through itemNames[]
 				for (int m=0; m<numberItems; m++)  {
 						if (productBought.equals(itemNames[m])) {
 							totals[m] += numberOfItem;
+							booleanProduct = true;
+							indexOfItem = m;
 						}
 					
+				}		
+				
+				if (booleanProduct == true) {
+					customerTotals[indexOfItem]++;
 				}
 			
 			}
 	
 		}	
-		
-		System.out.println(Arrays.toString(totals));
+				
+		for(int h=0; h<totals.length; h++) {
+			if(totals[h]==0) {
+				System.out.println("No customers bought " + itemNames[h]);
+			} else {
+				System.out.println(customerTotals[h] + " customers bought " + totals[h] + " " + itemNames[h]);
+			}
+		}
 		
 	}
 }
