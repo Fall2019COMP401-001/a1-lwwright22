@@ -61,31 +61,31 @@ public class A1Adept {
 	// then make methods that loop through the total spent array to find max, min, and avg
 		
 		//print the maximum
-		double cur_max = totalSpent[0];		
+		double curMax = totalSpent[0];		
 		String maxName = customerNames[0];
 		
 		for (int i=1; i < totalSpent.length; i++) {
-			if (totalSpent[i] > cur_max) {
-				cur_max = totalSpent[i];
+			if (totalSpent[i] > curMax) {
+				curMax = totalSpent[i];
 				maxName = customerNames[i];
 			}
 		}
 		
-		System.out.println("Biggest: " + maxName + " (" + String.format("%.2f", cur_max) + ")");
+		System.out.println("Biggest: " + maxName + " (" + String.format("%.2f", curMax) + ")");
 
 		//print the minimum
 		
-		double cur_min = totalSpent[0];		
+		double curMin = totalSpent[0];		
 		String minName = customerNames[0];
 		
 		for (int i=1; i < totalSpent.length; i++) {
-			if (totalSpent[i] < cur_min) {
-				cur_min = totalSpent[i];
+			if (totalSpent[i] < curMin) {
+				curMin = totalSpent[i];
 				minName = customerNames[i];
 			}
 		}
 		
-		System.out.println("Smallest: " + minName + " (" + String.format("%.2f", cur_min) + ")");
+		System.out.println("Smallest: " + minName + " (" + String.format("%.2f", curMin) + ")");
 
 		//print the average
 		

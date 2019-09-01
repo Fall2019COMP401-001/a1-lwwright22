@@ -41,20 +41,6 @@ public class A1Novice {
 			 
 		 }
 		 
-		 
-		
-		
 	}
-	
-	// public static Customer createnewclass() {		
-		// String firstname = scan.next();
-		// String lastname = scan.next();
-		// int productsbought = scan.nextInt();
-		
-		// for (int j=0; j<products.bought; j++) {
-			
-		// }
-		
-	// }
 		
 }
