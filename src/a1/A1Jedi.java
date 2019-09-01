@@ -41,27 +41,29 @@ public class A1Jedi {
 			
 			//total of the items bought by this customer
 			int itemsBought = scan.nextInt();
+			boolean[] boughtYet = new boolean[numberItems];
 			
 			//this is the loop that loops through what each customer bought
 			for (int k=0; k<itemsBought; k++) {
 				int numberOfItem = scan.nextInt();
 				String productBought = scan.next();
-				boolean booleanProduct = false;
 				int indexOfItem = 0;
 				
 				//this is the loop that goes through itemNames[]
 				for (int m=0; m<numberItems; m++)  {
 						if (productBought.equals(itemNames[m])) {
 							totals[m] += numberOfItem;
-							booleanProduct = true;
-							indexOfItem = m;
+							indexOfItem = m;		
+							if (boughtYet[m] == false) {
+								customerTotals[indexOfItem]++;
+							}
+							boughtYet[m] = true;
 						}
-					
-				}		
+				}	
 				
-				if (booleanProduct == true) {
-					customerTotals[indexOfItem]++;
-				}
+				
+				
+				
 			
 			}
 	
