@@ -56,9 +56,6 @@ public class A1Adept {
 			}
 	
 		}
-		
-		System.out.println(Arrays.toString(customerNames));
-		System.out.println(Arrays.toString(totalSpent));
 
 	
 	// then make methods that loop through the total spent array to find max, min, and avg
